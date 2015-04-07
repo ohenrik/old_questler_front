@@ -1,4 +1,4 @@
-module user {
+module questler {
   'use strict';
 
   interface INavbarScope extends ng.IScope {

@@ -1,0 +1,97 @@
+@import "breakpoint";
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+/*
+* Grid Variables
+*/
+$columns-count: 12;
+$gutter-width: 30px;
+
+$large: 1200px;
+$large-range: $large;
+
+$medium: 900px;
+$medium-range: $medium $large;
+
+$small: 600px;
+$small-range: $small $medium;
+
+$xs: 0px;
+$xs-range: $xs $small;
+
+$size-names: xs small medium large;
+$sizes: $xs $small $medium $large;
+$range-sizes: $xs-range $small-range $medium-range $large-range;
+
+/*
+* Container and Row
+*/
+.container {
+  @include clearfix;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: ($gutter-width / 2);
+  padding-right: ($gutter-width / 2);
+  @include breakpoint($small-range) {
+    width: $small;
+  }
+  @include breakpoint($medium-range) {
+    width: $medium;
+  }
+  @include breakpoint($large-range) {
+    width: $large;
+  }
+}
+.row {
+  margin-left: ($gutter-width / -2);
+  margin-right: ($gutter-width / -2);
+  @include clearfix;
+}
+
+/*
+* Columns
+*/
+@for $s from 1 through length($sizes){
+  @for $i from 1 through 12  {
+    
+      .col-#{nth($size-names, $s)}-#{$i} {
+        position: relative;
+        float: left;
+        padding-left: ($gutter-width / 2);
+        padding-right: ($gutter-width / 2);
+        @include breakpoint(nth($sizes, $s)) {
+          width:  percentage($i / $columns-count);  //(nth($columns-sizes, $s) * $i) - 30px;
+        }
+        // Prevent columns from collapsing when empty
+        min-height: 1px;
+      
+    }
+  }
+}
+
+/*
+* Offsets
+*/
+@for $s from 1 through length($sizes){
+  @for $i from 1 through 11  {
+    @include breakpoint(nth($sizes, $s)) {
+      .offset-#{nth($size-names, $s)}-#{$i} {
+        margin-left: percentage($i / $columns-count);
+      }
+    }
+  }
+}
+
+/*
+* Clearfix and other helpers
+*/
+.clearfix {
+  @include clearfix;
+}
+

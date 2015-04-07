@@ -1,0 +1,52 @@
+<div class="container">
+
+  <div ng-include="'components/navbar/navbar.html'"></div>
+
+</div>
+
+
+<div class="jumbotron-primary">
+  <div class="container">
+    <div class="center-text">
+      <h1 class="message">Questler <small class="bellow">Learning, one step at a time</small></h1>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="structure-form col-xs-12">
+    <form ng-submit="events.updateQuest(quest)">
+      <div class="field-wrapper">
+        <label for="title">Title:</label>
+        <input type="text" ng-model="quest.title">
+      </div>
+      <hr>
+      <div class="structure well" ng-repeat="structure in quest.structures_attributes | filter: _delete = false ">
+        
+        <label for="strucute_delete_{{structure.id}}" class="pull-right"><i class="fa fa-trash fa-fw"></i></label>
+        <input type="checkbox" id="strucute_delete_{{structure.id}}" ng-model="structure._destroy" class="hidden" ng-change="events.updateQuest(quest)">
+
+        <div class="field-wrapper">
+          <label for="strucute_name_{{structure.id}}">Structure Name:</label>
+          <input id="strucute_name_{{structure.id}}" type="text" ng-model="structure.name" placeholder="Name...">
+        </div>
+
+        <div class="field-wrapper">
+          <label for="strucute_description_{{structure.id}}" >Desctiption:</label>
+          
+          <textarea id="strucute_description_{{structure.id}}" type="textarea" ng-model="structure.description" placeholder="Description..."></textarea>
+        </div>
+
+
+        
+      </div>
+
+      <input type="submit" class="btn btn-primary">
+    
+    </form>
+  </div>
+</div>
+
+
+<br><br>
+{{ quest | json}}

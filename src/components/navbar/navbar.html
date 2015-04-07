@@ -1,13 +1,15 @@
-<nav class="navbar" ng-controller="NavbarCtrl">
-  <a href="https://github.com/Swiip/generator-gulp-angular">Gulp Angular</a>
-
-  <ul>
-    <li class="active"><a ng-href="#">Home</a></li>
-    <li><a ng-href="#">About</a></li>
-    <li><a ng-href="#">Contact</a></li>
-  </ul>
-
-  <ul>
-    <li><a ng-href="#">Current date: {{ date | date:'yyyy-MM-dd' }}</a></li>
-  </ul>
-</nav>
+<header class="header pull-right" ng-controller="NavbarCtrl">
+  <div class="container">
+    <div class="logo">    
+      <img src="assets/images/CortexLogo.png">
+    </div>
+    <nav class="navigation nav-content pull-right">
+      <ul class="navigation-horizontal">
+        <li><a ui-sref="home" class="active">Home</a></li>
+        <li><a ui-sref="quests">Quests</a></li>
+        <li><a ui-sref="users">Users</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>

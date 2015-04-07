@@ -1,0 +1,56 @@
+@import "variables";
+@font-face {
+  font-family: 'Caslon';
+  src: url('../fonts/ACaslonPro-SemiboldItalic.eot');
+  src: local('☺'), url('../fonts/ACaslonPro-SemiboldItalic.woff') format('woff'), url('../fonts/ACaslonPro-SemiboldItalic.ttf') format('truetype'), url('../fonts/ACaslonPro-SemiboldItalic.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  color: $base-text-color;
+  font-size: $base-font-size;
+  font-family: $base-font-family;
+  font-weight: $base-font-weight;
+  line-height: $base-lineheight;
+}
+// All headers to correct font
+h1, h2, h3 ,h4, h5, h6 {
+  font-family: $header-font-family;
+  small {
+    font-size: 60%;
+    color: $muted-color;
+  }
+  small.bellow {
+    display: block;
+    margin-top: -10px;
+  }
+  line-height: $header-lineheight;
+}
+// Unique header styles
+h1 {
+  font-size: 54px;
+}
+h2 {
+  font-size: 36px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 16px;
+  //font-weight: 600;
+  //font-family: 'Caslon';
+}
+h5 {
+  font-size: 12px;
+  color: $muted-color;
+}
+small {
+  font-size: $base-font-size * 0.75;
+  color: $muted-color;
+}
+.page-header {
+  border-bottom: 2px solid $primary-color;
+  margin-bottom: 15px;
+}

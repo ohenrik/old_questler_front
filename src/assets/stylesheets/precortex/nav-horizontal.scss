@@ -1,0 +1,27 @@
+@import "variables";
+.navigation {
+  font-family: $header-font-family;
+  ul {
+    float: right;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+}
+.navigation-horizontal li {
+  float: left;
+  list-style: none;
+  a {
+    padding: 15px 15px;
+    font-family: $header-font-family;
+    color: $text-gray-color;
+    text-decoration: none;
+  }
+  a:active, a:hover {
+    //border: 1px solid darken($bg-gray-color, 10);
+    //color: $secondary-color;
+    background-color: lighten($bg-gray-color, 5);
+  }
+  a.active {
+    color: $secondary-color;
+  } 
+}

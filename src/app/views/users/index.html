@@ -1,0 +1,20 @@
+<div class="container">
+
+  <div ng-include="'components/navbar/navbar.html'"></div>
+  <table>
+    <thead>
+      <th>Profile Image</th>
+      <th>Username</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+    </thead>
+    <tbody>
+      <tr ng-repeat="user in users">
+        <td><img ng-src="{{ baseUrl + user.avatar_thumbnail_url }}" alt=""></td>
+        <td>{{ user.username }} </td>
+        <td>{{ user.first_name }}</td>
+        <td>{{ user.last_name }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

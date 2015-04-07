@@ -1,0 +1,25 @@
+@import "variables";
+.navigation {
+  font-family: $header-font-family;
+}
+.navigation-vertical li {
+  list-style: none;
+  a {
+    width: 100%;
+    display: inline-block;
+    line-height: 1;
+    margin: 4px 0;
+    //padding: 15px 15px;
+    font-family: $header-font-family;
+    color: $text-gray-color;
+    text-decoration: none;
+  }
+  a:active, a:hover {
+    border-left: 2px solid $muted-color;
+    padding-left: 4px;
+  }
+  a.active {
+    border-left: 2px solid $primary-color;
+    padding-left: 4px;
+  } 
+}
