@@ -1,11 +1,4 @@
 @import "variables";
-@font-face {
-  font-family: 'Caslon';
-  src: url('../fonts/ACaslonPro-SemiboldItalic.eot');
-  src: local('☺'), url('../fonts/ACaslonPro-SemiboldItalic.woff') format('woff'), url('../fonts/ACaslonPro-SemiboldItalic.ttf') format('truetype'), url('../fonts/ACaslonPro-SemiboldItalic.svg') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
 
 body {
   color: $base-text-color;
