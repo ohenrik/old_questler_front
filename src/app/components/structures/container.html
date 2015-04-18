@@ -1,0 +1,8 @@
+<div class="container">
+
+  <div  ng-repeat="bridge_item in structure.items_attributes" 
+        ng-init="item = bridge_item.itemizable_attributes" 
+        ng-include="'app/components/structures/items/'+ bridge_item.itemizable_type + '.html'">
+  </div>
+    
+</div>

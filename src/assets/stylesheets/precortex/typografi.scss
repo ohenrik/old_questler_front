@@ -26,6 +26,13 @@ h1, h2, h3 ,h4, h5, h6 {
     margin-top: -10px;
   }
   line-height: $header-lineheight;
+  a {
+    text-decoration: none;
+    color: $base-text-color;
+    &:hover, &:active {
+      color: lighten($base-text-color, 15);
+    }
+  }
 }
 // Unique header styles
 h1 {

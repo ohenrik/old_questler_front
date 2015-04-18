@@ -1,11 +1,13 @@
 /// <reference path="../../.tmp/typings/tsd.d.ts" />
 
-/// <reference path="controllers/users/user.controller.ts" />
+/// <reference path="users/user.controller.ts" />
 
-/// <reference path="controllers/quests/quest.index.controller.ts" />
-/// <reference path="controllers/quests/quest.edit.controller.ts" />
+/// <reference path="quests/quest.index.controller.ts" />
+/// <reference path="quests/quest.show.controller.ts" />
+/// <reference path="quests/quest.edit.controller.ts" />
 
-/// <reference path="controllers/navbar.controller.ts" />
+
+/// <reference path="components/navbar/navbar.controller.ts" />
 
 module questler {
   'use strict';
@@ -13,6 +15,7 @@ module questler {
   angular.module('questler', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'restangular', 'ui.router'])
     .controller('UserCtrl', UserCtrl)
     .controller('QuestIndexCtrl', QuestIndexCtrl)
+    .controller('QuestShowCtrl', QuestShowCtrl)
     .controller('QuestEditCtrl', QuestEditCtrl)
     .controller('NavbarCtrl', NavbarCtrl)
 
@@ -25,22 +28,27 @@ module questler {
     $stateProvider
       .state('home', {
         url: '/',
-        templateUrl: 'app/views/home/index.html',
+        templateUrl: 'app/home.html',
         controller: 'UserCtrl'
       })
       .state('quests', {
         url: '/quests',
-        templateUrl: 'app/views/quests/index.html',
+        templateUrl: 'app/quests/index.html',
         controller: 'QuestIndexCtrl'
+      })
+      .state('quest', {
+        url: '/quests/:id',
+        templateUrl: 'app/quests/show.html',
+        controller: 'QuestShowCtrl'
       })
       .state('new_quest', {
         url: '/quests/:id/edit',
-        templateUrl: 'app/views/quests/form.html',
+        templateUrl: 'app/quests/form.html',
         controller: 'QuestEditCtrl'
       })
       .state('users', {
         url: '/users',
-        templateUrl: 'app/views/users/index.html',
+        templateUrl: 'app/users/index.html',
         controller: 'UserCtrl'
       })
       ;

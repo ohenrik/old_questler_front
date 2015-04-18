@@ -1,5 +1,15 @@
 @import "precortex/index";
 @import "variables";
+@import "content-headers";
+
+html {
+  background-color: $footer-bg-color;
+}
+
+.bg-color {
+  background-color: $site-bg-gray; 
+  padding-bottom: 45px; 
+}
 
 .logo {
   display: inline-block;
@@ -10,7 +20,15 @@
 .nav-content {
   margin-top: 23px;
 }
+.header {
+  background-color: $white;
+  border-bottom: 1px solid #DEDEDE;
+  margin-bottom: 45px;
+}
 .structure {
   margin-top: 15px;
   margin-bottom: 15px;
+}
+.footer {
+
 }

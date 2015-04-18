@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-small-10 offset-small-1 col-medium-8 offset-medium-2 col-large-6 offset-large-3">
+    
+      <div  ng-repeat="bridge_item in structure.items_attributes" 
+            ng-init="item = bridge_item.itemizable_attributes" 
+            ng-include="'app/components/structures/items/'+ bridge_item.itemizable_type + '.html'">
+      </div>
+    
+    </div>
+  </div>
+</div>
