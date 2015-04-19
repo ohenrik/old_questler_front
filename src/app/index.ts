@@ -12,7 +12,7 @@
 module questler {
   'use strict';
 
-  angular.module('questler', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'restangular', 'ui.router'])
+  angular.module('questler', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'restangular', 'ui.router', 'xeditable', 'monospaced.elastic'])
     .controller('UserCtrl', UserCtrl)
     .controller('QuestIndexCtrl', QuestIndexCtrl)
     .controller('QuestShowCtrl', QuestShowCtrl)
@@ -41,9 +41,9 @@ module questler {
         templateUrl: 'app/quests/show.html',
         controller: 'QuestShowCtrl'
       })
-      .state('new_quest', {
+      .state('edit_quest', {
         url: '/quests/:id/edit',
-        templateUrl: 'app/quests/form.html',
+        templateUrl: 'app/quests/edit.html',
         controller: 'QuestEditCtrl'
       })
       .state('users', {
@@ -55,5 +55,12 @@ module questler {
 
     $urlRouterProvider.otherwise('/');
   })
-;
+  
+  .run(function(editableOptions, editableThemes) {
+    // set `default` theme
+    editableOptions.theme = 'default';
+    // overwrite submit button template
+    editableThemes['default'].submitTpl = '<button type="submit">ok</button>';
+  });
+
 }

@@ -5,6 +5,7 @@ module questler {
     quest
     baseUrl
     events
+    editable
   }
 
   export class QuestEditCtrl {
@@ -12,6 +13,7 @@ module questler {
     constructor ($scope: IQuestScope, Restangular, $stateParams, $cookies) {
 
       $scope.events = this;
+      $scope.editable = true;
 
       $scope.baseUrl = 'http://localhost:3000';
       Restangular.one('quests',  $stateParams.id).get().then( responseObject =>

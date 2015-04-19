@@ -1,1 +1,5 @@
-{{ item.content }}
+<div class="content" ng-if="editable">
+  <a href="#" editable-textarea="item.content" e-class="msd-elastic" e-placeholder="Enter title" onaftersave="events.updateQuest(quest)" blur="submit" buttons="no">{{ item.content }}</a>
+</div>
+
+<div class="content" ng-if="!editable">{{ item.content }}</div>

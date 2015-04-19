@@ -1,0 +1,16 @@
+<div ng-include="'app/components/navbar/navbar.html'"></div>
+
+<div class="quest">
+  <div class="container">
+    <div class="content-header">
+      <span class="quest-areas"><a href="#" class="quest-area">Git</a>, <a href="#" class="quest-area">Github</a></span>
+      
+      <a href="#" e-class="h1" editable-text="quest.title" e-placeholder="Enter title" onaftersave="events.updateQuest(quest)" blur="submit" buttons="no"><h1>{{ quest.title }}</h1></a>
+
+      <span class="content-type">Quest</span>
+    </div>
+  </div>
+
+  <div ng-repeat="structure in quest.structures_attributes" ng-include="'app/components/structures/'+ structure.slug + '.html'"></div>
+
+</div>
