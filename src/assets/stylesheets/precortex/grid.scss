@@ -1,4 +1,4 @@
-@import "breakpoint";
+@import "../../../../bower_components/compass-breakpoint/stylesheets/breakpoint";
 @mixin clearfix {
   &:after {
     content: "";
