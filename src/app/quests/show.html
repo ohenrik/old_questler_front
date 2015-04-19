@@ -12,3 +12,7 @@
   <div ng-repeat="structure in quest.structures_attributes" ng-include="'app/components/structures/'+ structure.slug + '.html'"></div>
 
 </div>
+
+<div class="container">
+  <a ui-sref="edit_quest({id: quest.id})" class="btn btn-primary">Edit</a>
+</div>
