@@ -3,13 +3,13 @@
 body {
   color: $base-text-color;
   font-size: $base-font-size;
-  font-family: $base-font-family;
+  font-family: $sans-serif-font;
   font-weight: $base-font-weight;
   line-height: $base-lineheight;
 }
 // All headers to correct font
 h1, h2, h3 ,h4, h5, h6 {
-  font-family: $header-font-family;
+  font-family: $serif-font;
   small {
     font-size: 60%;
     color: $muted-color;

@@ -1,6 +1,6 @@
 @import "variables";
 .navigation {
-  font-family: $header-font-family;
+  font-family: $sans-serif-font;
 }
 .navigation-vertical li {
   list-style: none;
@@ -10,7 +10,7 @@
     line-height: 1;
     margin: 4px 0;
     //padding: 15px 15px;
-    font-family: $header-font-family;
+    font-family: $sans-serif-font;
     color: $text-gray-color;
     text-decoration: none;
   }

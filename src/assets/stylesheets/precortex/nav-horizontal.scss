@@ -1,6 +1,6 @@
 @import "variables";
 .navigation {
-  font-family: $header-font-family;
+  font-family: $sans-serif-font;
   ul {
     float: right;
     margin-top: 15px;
@@ -12,7 +12,7 @@
   list-style: none;
   a {
     padding: 15px 15px;
-    font-family: $header-font-family;
+    font-family: $sans-serif-font;
     color: $text-gray-color;
     text-decoration: none;
   }
