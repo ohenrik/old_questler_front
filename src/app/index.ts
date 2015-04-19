@@ -5,6 +5,7 @@
 /// <reference path="quests/quest.index.controller.ts" />
 /// <reference path="quests/quest.show.controller.ts" />
 /// <reference path="quests/quest.edit.controller.ts" />
+/// <reference path="quests/quest.new.controller.ts" />
 
 
 /// <reference path="components/navbar/navbar.controller.ts" />
@@ -17,6 +18,7 @@ module questler {
     .controller('QuestIndexCtrl', QuestIndexCtrl)
     .controller('QuestShowCtrl', QuestShowCtrl)
     .controller('QuestEditCtrl', QuestEditCtrl)
+    .controller('QuestNewCtrl', QuestNewCtrl)
     .controller('NavbarCtrl', NavbarCtrl)
 
   .config(function ($stateProvider: ng.ui.IStateProvider, $urlRouterProvider: ng.ui.IUrlRouterProvider, RestangularProvider, $cookiesProvider) {
@@ -45,6 +47,11 @@ module questler {
         url: '/quests/:id/edit',
         templateUrl: 'app/quests/edit.html',
         controller: 'QuestEditCtrl'
+      })
+      .state('new_quest', {
+        url: '/quests/new',
+        templateUrl: 'app/quests/edit.html',
+        controller: 'QuestNewCtrl'
       })
       .state('users', {
         url: '/users',

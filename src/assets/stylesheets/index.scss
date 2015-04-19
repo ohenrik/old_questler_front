@@ -1,6 +1,7 @@
-@import "precortex/index";
+@import "../../../bower_components/pre-cortex/pre-cortex";
 @import "variables";
 @import "content-headers";
+@import "xeditable/xeditable-index.scss";
 
 html {
   background-color: $footer-bg-color;

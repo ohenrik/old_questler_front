@@ -1,9 +1,0 @@
-@import "variables";
-.well {
-  background-color: $bg-gray-color;
-  border: 1px solid darken($bg-gray-color, 10);
-  padding: 12px 17px;
-  -moz-box-shadow:    inset 0 0 5px darken($bg-gray-color, 10);
-  -webkit-box-shadow: inset 0 0 5px darken($bg-gray-color, 10);
-  box-shadow:         inset 0 0 5px darken($bg-gray-color, 10);
-}
